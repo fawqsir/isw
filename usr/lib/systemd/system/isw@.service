@@ -3,7 +3,7 @@ Description=ISW fan control service
 After=sleep.target
 
 [Service]
-ExecStartPre=/usr/bin/sleep 2
+ExecStartPre=sh /etc/isw/execprestart.sh
 ExecStart=/usr/bin/isw -w %I
 Type=oneshot
 
