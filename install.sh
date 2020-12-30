@@ -15,6 +15,9 @@ cp usr/lib/systemd/system/isw@.service /usr/lib/systemd/system/isw@.service
 chmod 644 /usr/lib/systemd/system/isw@.service
 cp isw /usr/bin/isw
 chmod 755 /usr/bin/isw
+mkdir /etc/isw
+cp etc/isw/execprestart.sh /etc/isw/execprestart.sh
+chmod 755 /etc/isw/execprestart.sh
 
 #Create systemctl for you MSI Motherboard
 systemctl enable isw@%1.service
