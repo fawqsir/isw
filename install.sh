@@ -1,5 +1,8 @@
 #!/bin/sh
 
+## example
+# sudo sh install.sh 16U5EMS1
+
 cp etc/isw.conf /etc/isw.conf
 chmod 644 /etc/isw.conf
 cp etc/modprobe.d/isw-ec_sys.conf /etc/modprobe.d/isw-ec_sys.conf
@@ -12,3 +15,6 @@ cp usr/lib/systemd/system/isw@.service /usr/lib/systemd/system/isw@.service
 chmod 644 /usr/lib/systemd/system/isw@.service
 cp isw /usr/bin/isw
 chmod 755 /usr/bin/isw
+
+#Create systemctl for you MSI Motherboard
+systemctl enable isw@%1.service
