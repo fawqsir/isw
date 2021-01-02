@@ -1,14 +1,14 @@
 #!/bin/sh
 
 ## example
-# sudo sh install.sh 16U5EMS1
+# sudo sh ./install.sh 16U5EMS1
 
 cp etc/isw.conf /etc/isw.conf
 chmod 644 /etc/isw.conf
 cp etc/modprobe.d/isw-ec_sys.conf /etc/modprobe.d/isw-ec_sys.conf
 chmod 644 /etc/modprobe.d/isw-ec_sys.conf
-cp modules-load.d/isw-ec_sys.conf /modules-load.d/isw-ec_sys.conf
-chmod 644 /modules-load.d/isw-ec_sys.conf
+cp etc/modules-load.d/isw-ec_sys.conf /etc/modules-load.d/isw-ec_sys.conf
+chmod 644 /etc/modules-load.d/isw-ec_sys.conf
 cp etc/modules-load.d/isw-ec_sys.conf /etc/modules-load.d/isw-ec_sys.conf 
 chmod 644 /etc/modules-load.d/isw-ec_sys.conf 
 cp usr/lib/systemd/system/isw@.service /usr/lib/systemd/system/isw@.service
