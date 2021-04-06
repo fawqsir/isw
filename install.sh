@@ -21,4 +21,5 @@ chmod 755 /etc/isw/execprestart.sh
 
 #Create systemctl for you MSI Motherboard
 systemctl enable isw@$1.service
-systemctl start isw@$1.service
+
+echo "Reboot for isw to start"
