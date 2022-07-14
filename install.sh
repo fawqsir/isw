@@ -3,6 +3,17 @@
 ## example
 # sudo sh ./install.sh 16U5EMS1
 
+if [[ "$EUID" != 0 ]]; then
+  echo "The script need to be run as root."
+  exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Please choose your laptop."
+  echo "sudo sh ./install.sh 16U5EMS1"
+  exit 1
+fi
+
 cp etc/isw.conf /etc/isw.conf
 chmod 644 /etc/isw.conf
 cp etc/modprobe.d/isw-ec_sys.conf /etc/modprobe.d/isw-ec_sys.conf
